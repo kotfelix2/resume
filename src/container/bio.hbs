@@ -1,109 +1,78 @@
 <div>
-    {{#with person}}
-        <h1>{{name}}</h1>
-        <p>{{gender}} (Age: {{age}})</p>
-        <br>
-        {{#with address}}
-        {{> title data="Address:" big=false }}
-            <p>Street: {{street}}</p>
-            <p>City: {{city}}</p>
-            <p>State: {{state}} </p>
-            <p>Zip: {{zip}} </p>
-            <p>Country: {{country}} </p>
-        {{/with}}
-        <br>
-        {{#each education}}
+    <h1>{{name}}</h1>
+    <p>Life: {{birthdate}} - {{deathdate}} </p>
+    <hr>
+    <p>Birthplace: {{birthplace}}</p>
+    <p>Deathplace: {{deathplace}}</p>
+    <p>Nationality: {{nationality}}</p>
+    <p>Occupation: {{occupation}}</p>
+    <hr>
+    {{> title data="Famous for" big=false }}
+    {{#each known_for}}
+            <ul><li>{{this}}</li></ul>
+    {{/each}}
+    <br>
+    {{#each education}}
             {{> title data="Education" big=false }}
             <p>Degree: {{degree}}</p>
-            <p>Major: {{major}}</p>
-            <p>University: {{university}} </p>
-            <p>Year: {{graduationYear}} </p>
-        {{/each}}
-        <br>
-            {{#each workExperience}}
-            {{> title data="Work experience" big=false }}
-            <p>Company: {{company}}</p>
+            <p>Field: {{field}}</p>
+            <p>Institution: {{institution}} </p>
+            <p>Year: {{year}} </p>
+    {{/each}}
+    <br>
+    {{> title data="Publications" big=false }}
+    {{#each notable_publications}}
+        <ul><li>
             <p>Title: {{title}}</p>
-            <p>Duration: {{startDate}} - {{endDate}} </p>
-            <p>Responsibilities: 
-                {{#each responsibilities}}
-                    <ul><li>{{this}}</li></ul>
-                {{/each}}
-            </p>
-            <p>Founded at: {{year_founded}}</p>
-            <p>Industry: {{industry}}</p>
-            <p>Employees: 
-                {{#each employees}}
-                    <ul>
-                        <p>Name: {{name}}</p>
-                        <p>Position: {{position}}</p>
-                        <p>Department: {{department}}</p>
-                        <p>Projects: 
-                            {{#each projects}}
-                                <ul>
-                                    <p>Name: {{name}}</p>
-                                    <p>Description: {{description}}</p>
-                                    <p>Status: {{status}}</p>
-                                    <p>Teams: 
-                                        {{#each teams}}
-                                            <ul>
-                                                <p>Team: {{team_name}}</p>
-                                                <p>Leader: 
-                                                    {{#with team_leader}}
-                                                    <ul>
-                                                        <p>Name: {{name}}</p>
-                                                        <p>Title: {{title}}</p>
-                                                        <p>Email: {{email}} </p>
-                                                    </ul>
-                                                    {{/with}}
-                                                </p>
-                                                <p>Team members: 
-                                                    {{#each team_members}}
-                                                    <ul>
-                                                        <p>Name: {{name}}</p>
-                                                        <p>Title: {{title}}</p>
-                                                        <p>Email: {{email}} </p>
-                                                        <p>Skills: 
-                                                            {{#each skills}}
-                                                                <ul><li>{{this}}</li></ul>
-                                                            {{/each}}
-                                                        </p>
-                                                        <p>Projects: 
-                                                            {{#each projects}}
-                                                            <ul>
-                                                                <p>Name: {{name}}</p>
-                                                                <p>Description: {{description}}</p>
-                                                                <p>Technologies: 
-                                                                    {{#each technologies}}
-                                                                        <ul><li>{{this}}</li></ul>
-                                                                    {{/each}}
-                                                                </p>
-                                                                <p>Team members: 
-                                                                    {{#each team_members}}
-                                                                    <ul>
-                                                                        <li>
-                                                                            <p>Name: {{name}}</p>
-                                                                            <p>Title: {{title}}</p>
-                                                                        </li>
-                                                                    </ul>
-                                                                    {{/each}}
-                                                                </p>
-                                                            </ul>
-                                                            {{/each}}
-                                                        </p>
-                                                    </ul>
-                                                    {{/each}}
-                                                </p>
-                                            </ul>
-                                        {{/each}}
-                                    </p>
-                                </ul>
-                            {{/each}}
-                        </p>
-                    </ul>
-                {{/each}}
-            </p>
-        {{/each}}
-        <br>
+            <p>Year: {{year}}</p>
+            <p>Publisher: {{publisher}} </p> 
+        </li></ul>   
+    {{/each}}
+    <br>
+    {{> title data="Partners" big=false }}
+    {{#each partners}}
+        <ul><li>
+            <p>Name: {{name}}</p>
+            <p>Relationship: {{relationship}}</p>
+            <p>Years: {{years}}</p> 
+        </li></ul>
+    {{/each}}
+    <br>
+    {{#each awards}}
+            {{> title data="Awards" big=false }}
+            <p>Title: {{title}}</p>
+            <p>Year: {{year}}</p>
+            <p>Description: {{description}} </p>    
+    {{/each}}
+    <hr>
+    {{> title data="Influences" big=false }}
+    {{#each influences}}
+            <ul><li>{{this}}</li></ul>
+    {{/each}}
+    <br>
+    {{> title data="Influenced" big=false }}
+    {{#each influenced}}
+            <ul><li>{{this}}</li></ul>
+    {{/each}}
+    <br>
+    {{> title data="Quotes" big=false }}
+    {{#each quotes}}
+            <ul><li><em><q>{{this}}</q></em></li></ul>
+    {{/each}}
+    <br>
+    {{#each major_discoveries}}
+            {{> title data="Major discoveries" big=false }}
+            <p>Title: {{title}}</p>
+            <p>Year: {{year}}</p>
+            <p>Description: {{description}} </p>   
+    {{/each}}
+    <br>
+    {{#with contributions}}
+            {{> title data="Contributions" big=false }}
+            <p>Title: {{title}}</p>
+            <p>Description: {{description}} </p>
+            <p>Year: {{year}}</p> 
+            <p>Field: {{field}} </p>   
     {{/with}}
+    <br>
 </div>
