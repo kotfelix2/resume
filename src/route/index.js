@@ -406,8 +406,7 @@ router.get('/bio', function (req, res) {
         publisher: 'Annalen der Physik',
       },
       {
-        title:
-          'Does the Inertia of a Body Depend Upon Its Energy Content?',
+        title: 'Does the Inertia of a Body Depend Upon Its Energy Content?',
         year: 1905,
         publisher: 'Annalen der Physik',
       },
@@ -454,14 +453,12 @@ router.get('/bio', function (req, res) {
       {
         title: 'Photoelectric Effect',
         year: 1905,
-        description:
-          'Einstein explained the photoelectric effect, where electrons are emitted from a metal surface when it is illuminated by light.',
+        description: 'Einstein explained the photoelectric effect, where electrons are emitted from a metal surface when it is illuminated by light.',
       },
     ],
     contributions: {
       title: 'Inventions',
-      description:
-        'Leonardo designed and invented a wide variety of machines and devices, including a helicopter, a diving suit, and a self-propelled cart. Many of his inventions were centuries ahead of their time.',
+      description: 'Leonardo designed and invented a wide variety of machines and devices, including a helicopter, a diving suit, and a self-propelled cart. Many of his inventions were centuries ahead of their time.',
       year: 'Late 15th to early 16th century',
       field: 'Invention',
     },
