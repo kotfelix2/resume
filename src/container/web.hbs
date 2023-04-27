@@ -1,0 +1,58 @@
+<div>
+{{> title data="Languages" big=true }}
+    {{#each web.languages}}
+        <p><b>{{name}} </b></p>
+        <p>Version: {{version}} </p>
+        <p>Description: {{description}} </p>
+        <p>{{#if elements}} <b>Elements:</b> {{/if}}
+        {{#each elements}}
+                <ul><li>
+                <p>Name: {{name}} </p>
+                <p>Description: {{description}} </p>
+                <p>Attributes: 
+                {{#each attributes}}
+                        <ul><li>
+                        <p>Name: {{name}} </p>
+                        <p>Description: {{description}} </p>
+                        </ul></li>
+                {{/each}}
+                </p>
+                </ul></li>
+        {{/each}}
+        </p>
+        <p>{{#if properties}} <b>Properties:</b> {{/if}}
+        {{#each properties}}
+                <ul><li>
+                <p>Name: {{name}} </p>
+                <p>Description: {{description}} </p>
+                <p>Values: 
+                {{#each values}}
+                        <ul><li>
+                        <p>Value: {{value}} </p>
+                        <p>Description: {{description}} </p>
+                        </ul></li>
+                {{/each}}
+                </p>
+                </ul></li>
+        {{/each}}
+        </p>
+        <p>{{#if functions}} <b>Functions:</b> {{/if}}
+        {{#each functions}}
+                <ul><li>
+                <p>Name: {{name}} </p>
+                <p>Description: {{description}} </p>
+                <p>Parameters: 
+                {{#each parameters}}
+                        <ul><li>
+                        <p>Name: {{name}} </p>
+                        <p>Type: {{type}} </p>
+                        <p>Description: {{description}} </p>
+                        </ul></li>
+                {{/each}}
+                </p>
+                </ul></li>
+        {{/each}}
+        </p>
+    <hr>
+    {{/each}}
+</div>
