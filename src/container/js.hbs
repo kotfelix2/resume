@@ -1,0 +1,130 @@
+<div>
+{{> title data=name big=true }}
+        <p><em>{{description}} </em></p>
+        <p>{{history.year}}, {{history.founder}} </p>
+        <hr>
+        <div class="card text-bg-info mb-3" style="max-width: 18rem;">
+                <div class="card-header"><h3>Types:</h3></div>
+                <div class="card-body">
+                <p class="card-text">
+                        {{#each types}}
+                        <span class="badge text-bg-info">{{this}}</span>
+                        {{/each}}
+                </p>
+                </div>
+        </div>
+        <hr>
+        {{> title data='Syntax' big=true }}
+        <p>{{#with syntax}}
+                <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                {{> title data='Variables:' big=false }}
+                </div>
+                {{#each variables}}
+                <ul class="list-group list-group-horizontal">
+                        <li class="list-group-item">{{this}} </li>
+                </ul>
+                {{/each}}
+                </div>
+        {{/with}}
+        <br>
+        </p>
+        <p>{{#with syntax}}
+                <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                {{> title data='Functions:' big=false }}
+                </div>
+                {{#each functions}}
+                <ul class="list-group list-group-horizontal">
+                        <li class="list-group-item">{{this}} </li>
+                </ul>
+                {{/each}}
+                </div>
+        {{/with}}
+        <br>
+        </p>
+        <p>{{#with syntax}}
+                <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                {{> title data='Conditionals:' big=false }}
+                </div>
+                {{#each conditionals}}
+                <ul class="list-group list-group-horizontal">
+                        <li class="list-group-item">{{this}} </li>
+                </ul>
+                {{/each}}
+                </div>
+        {{/with}}
+        <br>
+        </p>
+        <p>{{#with syntax}}
+                <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                {{> title data='Loops:' big=false }}
+                </div>
+                {{#each loops}}
+                <ul class="list-group list-group-horizontal">
+                        <li class="list-group-item">{{this}} </li>
+                </ul>
+                {{/each}}
+                </div>
+        {{/with}}
+        <br>
+        </p>
+        <p>{{#with syntax}}
+                <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                {{> title data='Classes:' big=false }}
+                </div>
+                {{#each classes}}
+                <ul class="list-group list-group-horizontal">
+                        <li class="list-group-item">{{this}} </li>
+                </ul>
+                {{/each}}
+                </div>
+        {{/with}}
+        <br>
+        </p>
+        <hr>
+        <div class="card" style="width: 18rem;">
+        <div class="card-header">
+        <p>{{> title data='Features:' big=false }}
+        </div>
+                {{#each features}}
+                <ul class="list-group list-group-horizontal">
+                        <li class="list-group-item">{{this}} </li>
+                </ul>
+                {{/each}}
+        </div>
+        </p>
+        <hr>
+        <div class="hstack gap-3">
+        <p>{{> title data='Libraries:' big=false }}
+        {{#each libraries}}
+                <div class="p-2">{{this}}</div>
+        {{/each}}
+        </div>
+        <hr>
+        <div class="card text-bg-info mb-3" style="max-width: 18rem;">
+                <div class="card-header"><h3>Tools:</h3></div>
+                <div class="card-body">
+                <p class="card-text">
+                        {{#each tools}}
+                        <span class="badge text-bg-info">{{this}}</span>
+                        {{/each}}
+                </p>
+                </div>
+        </div>
+        <hr>
+        {{> title data='Community:' big=false }}
+        {{#each community}}
+        <div class="col">
+                <div class="card h-100">
+                <div class="card-body">
+                        <h5 class="card-title">{{name}} </h5>
+                        <p class="card-text">{{type}} </p>
+                </div>
+                </div>
+        {{/each}}
+        </div>
+</div>
