@@ -32,12 +32,48 @@
                               <div class="card-body text-primary">
                                 <h5 class="card-title">{{name}}</h5>
                                 <p class="card-text">ID: {{id}}</p>
+                                <p><div class="accordion-item">
+              
                               </div>
                             </div>
                             {{/each}}
                         </button>
                           
                       </p>
+
+                      <h2 class="accordion-header">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                              <b>Groups:</b>
+                      </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                          {{#each groups}}
+                          <div class="card border-primary mb-3" style="max-width: 18rem;">
+                            <div class="card-header">{{name}}</div>
+                            <div class="card-body text-primary">
+                              <h5 class="card-title">{{description}}</h5>
+                              <p class="card-text">
+                                <p>ID: {{id}}</p>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Mutual friends:">
+                                  Members:
+                                  {{#each members}}
+                                    <div class="card border-primary mb-3" style="max-width: 18rem;">
+                                      <div class="card-header">{{gender}}, {{age}}</div>
+                                      <div class="card-body text-primary">
+                                        <h5 class="card-title">{{name}}</h5>
+                                        <p class="card-text">ID: {{id}}</p>
+                                      </div>
+                                    </div>
+                                    {{/each}}
+                                </button>
+                                  
+                              </p>
+                            </div>
+                          </div>
+                          {{/each}}
+                      </div>
+                      </div></p>
                     </div>
                   </div>
                   {{/each}}
