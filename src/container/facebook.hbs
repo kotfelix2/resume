@@ -1,0 +1,86 @@
+<div>
+{{> title data=name big=true }}
+<hr>
+{{> title data='Users:' big=true }}
+{{#each users}}
+  <div class="card border-info mb-3" style="max-width: 50rem;">
+  <div class="card-header">{{gender}}, {{age}} </div>
+    <div class="card-body">
+      <h5 class="card-title">{{name}} </h5>
+      <p class="card-text">
+        <p>ID: {{id}}</p>
+            <p><div class="accordion-item">
+              <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <b>Friends:</b>
+              </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                  {{#each friends}}
+                  <div class="card border-primary mb-3" style="max-width: 18rem;">
+                    <div class="card-header">{{gender}}, {{age}}</div>
+                    <div class="card-body text-primary">
+                      <h5 class="card-title">{{name}}</h5>
+                      <p class="card-text">
+                        <p>ID: {{id}}</p>
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Mutual friends:">
+                          Mutual friends:
+                          {{#each mutual_friends}}
+                            <div class="card border-primary mb-3" style="max-width: 18rem;">
+                              <div class="card-header">{{gender}}, {{age}}</div>
+                              <div class="card-body text-primary">
+                                <h5 class="card-title">{{name}}</h5>
+                                <p class="card-text">ID: {{id}}</p>
+                              </div>
+                            </div>
+                            {{/each}}
+                        </button>
+                          
+                      </p>
+                    </div>
+                  </div>
+                  {{/each}}
+              </div>
+              </div></p>
+          </div>
+      </p>
+
+      <p><div class="accordion-item">
+              <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                      <b>Groups:</b>
+              </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                  {{#each groups}}
+                  <div class="card border-primary mb-3" style="max-width: 18rem;">
+                    <div class="card-header">{{name}}</div>
+                    <div class="card-body text-primary">
+                      <h5 class="card-title">{{description}}</h5>
+                      <p class="card-text">
+                        <p>ID: {{id}}</p>
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Mutual friends:">
+                          Members:
+                          {{#each members}}
+                            <div class="card border-primary mb-3" style="max-width: 18rem;">
+                              <div class="card-header">{{gender}}, {{age}}</div>
+                              <div class="card-body text-primary">
+                                <h5 class="card-title">{{name}}</h5>
+                                <p class="card-text">ID: {{id}}</p>
+                              </div>
+                            </div>
+                            {{/each}}
+                        </button>
+                          
+                      </p>
+                    </div>
+                  </div>
+                  {{/each}}
+              </div>
+              </div></p>
+    </div>
+  </div>
+{{/each}}
+</div>
