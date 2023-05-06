@@ -1,0 +1,376 @@
+<div>
+{{> title data=name big=true }}
+<h5><span class="badge bg-secondary">{{category}} </span></h5>
+        <p>{{description}}, <b>Price:</b> {{price}} </p>
+        <p>{{> title data='Features:' big=false }}</p>
+        <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Processor
+                </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                      <th>Brand</th>
+                      <th>Model</th>
+                      <th>Speed</th>
+                      <th>Cores</th>
+                      <th>Cache</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <td>
+                      {{features.processor.brand}}
+                    </td>
+                    <td>
+                      {{features.processor.model}}
+                    </td>
+                    <td>
+                      {{features.processor.speed}}
+                    </td>
+                    <td>
+                      {{features.processor.cores}}
+                    </td>
+                    <td>
+                      {{features.processor.cache}}
+                    </td>
+                    </tr>
+                    </tbody>
+                    </table>   
+          </div>
+          </div>
+          </div>
+
+          <div class="accordion-item">
+          <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  Memory
+          </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+                  <table class="table table-striped">
+                          <thead>
+                                  <tr>
+                                  <th>Type</th>
+                                  <th>Size</th>
+                                  <th>Speed</th>
+                                  </tr>
+                          </thead>
+                          <tbody>
+                          
+                          <tr>
+                          <td>
+                                  {{features.memory.type}}
+                          </td>
+                          <td>
+                                  {{features.memory.size}}
+                          </td>
+                          <td>
+                                  {{features.memory.speed}}
+                          </td>
+                          </tr>
+                          
+                          </tbody>
+                          </table>  
+          </div>
+          </div>
+          </div>
+
+          <div class="accordion-item">
+          <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  Storage
+          </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+                        <table class="table table-striped">
+                          <thead>
+                                  <tr>
+                                  <th>Type</th>
+                                  <th>Size</th>
+                                  </tr>
+                          </thead>
+                          <tbody>
+                          
+                          <tr>
+                          <td>
+                                  {{features.storage.type}}
+                          </td>
+                          <td>
+                                  {{features.storage.size}}
+                          </td>
+                          </tr>
+                          
+                          </tbody>
+                          </table>   
+          </div>
+          </div>
+          </div>
+          
+          <div class="accordion-item">
+          <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                  Display
+          </button>
+          </h2>
+          <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+                <table class="table table-striped">
+                  <thead>
+                          <tr>
+                          <th>Size</th>
+                          <th>Resolution</th>
+                          <th>Technology</th>
+                          <th>Color space</th>
+                          <th>Brightness</th>
+                          <th>Refresh rate</th>
+                          </tr>
+                  </thead>
+                  <tbody>
+                  
+                  <tr>
+                  <td>
+                          {{features.display.size}}
+                  </td>
+                  <td>
+                          {{features.display.resolution}}
+                  </td>
+                  <td>
+                          {{features.display.technology}}
+                  </td>
+                  <td>
+                          {{features.display.color_space}}
+                  </td>
+                  <td>
+                          {{features.display.brightness}}
+                  </td>
+                  <td>
+                          {{features.display.refresh_rate}}
+                  </td>
+                  </tr>
+                  
+                  </tbody>
+                  </table>   
+          </div>
+          </div>
+          </div>
+
+          <div class="accordion-item">
+          <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                  Graphics
+          </button>
+          </h2>
+          <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+                <table class="table table-striped">
+                  <thead>
+                          <tr>
+                          <th>Brand</th>
+                          <th>Model</th>
+                          <th>Memory</th>
+                          </tr>
+                  </thead>
+                  <tbody>
+                  
+                  <tr>
+                  <td>
+                          {{features.graphics.brand}}
+                  </td>
+                  <td>
+                          {{features.graphics.model}}
+                  </td>
+                  <td>
+                          {{features.graphics.memory}}
+                  </td>
+                  </tr>
+                  
+                  </tbody>
+                  </table>   
+          </div>
+          </div>
+          </div>
+
+          <div class="accordion-item">
+          <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                  Ports
+          </button>
+          </h2>
+          <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+                <table class="table table-striped">
+                  <thead>
+                          <tr>
+                          <th>Type</th>
+                          <th>Count</th>
+                          <th>Features</th>
+                          </tr>
+                  </thead>
+                  <tbody>
+              {{#each features.ports}}
+                  <tr>
+                  <td>
+                          {{type}}
+                  </td>
+                  <td>
+                          {{count}}
+                  </td>
+                  <td>
+                          {{#each features}}
+                          <ul><li>{{this}} </li></ul>
+                          {{/each}}
+                  </td>
+                  </tr> 
+              {{/each}}
+                  </tbody>
+                  </table>
+                  <br>
+          </div>
+          </div>
+          </div>
+
+          <div class="accordion-item">
+          <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                  Battery
+          </button>
+          </h2>
+          <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+                <table class="table table-striped">
+                  <thead>
+                          <tr>
+                          <th>Type</th>
+                          <th>Capacity</th>
+                          <th>Life</th>
+                          </tr>
+                  </thead>
+                  <tbody>
+                  
+                  <tr>
+                  <td>
+                          {{features.battery.type}}
+                  </td>
+                  <td>
+                          {{features.battery.capacity}}
+                  </td>
+                  <td>
+                          {{features.battery.life}}
+                  </td>
+                  </tr>
+                  
+                  </tbody>
+                  </table>   
+          </div>
+          </div>
+          </div>
+
+          <div class="accordion-item">
+          <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                  Weight
+          </button>
+          </h2>
+          <div id="flush-collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+                {{features.weight}}  
+          </div>
+          </div>
+          </div>
+
+          <div class="accordion-item">
+          <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                  Dimensions
+          </button>
+          </h2>
+          <div id="flush-collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+                <table class="table table-striped">
+                  <thead>
+                          <tr>
+                          <th>Height</th>
+                          <th>Width</th>
+                          <th>Depth</th>
+                          </tr>
+                  </thead>
+                  <tbody>
+                  
+                  <tr>
+                  <td>
+                          {{features.dimensions.height}}
+                  </td>
+                  <td>
+                          {{features.dimensions.width}}
+                  </td>
+                  <td>
+                          {{features.dimensions.depth}}
+                  </td>
+                  </tr>
+                  
+                  </tbody>
+                  </table>   
+          </div>
+          </div>
+          </div>
+
+          <div class="accordion-item">
+          <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+                  Operating system
+          </button>
+          </h2>
+          <div id="flush-collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+                {{features.operating_system}}  
+          </div>
+          </div>
+          </div>
+
+          <div class="accordion-item">
+          <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
+                  Ports
+          </button>
+          </h2>
+          <div id="flush-collapseEleven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+                <table class="table table-striped">
+                  <thead>
+                          <tr>
+                          <th>Name</th>
+                          <th>price</th>
+                          </tr>
+                  </thead>
+                  <tbody>
+              {{#each features.accessories}}
+                  <tr>
+                  <td>
+                          {{name}}
+                  </td>
+                  <td>
+                          {{price}}
+                  </td>
+                  </tr> 
+              {{/each}}
+                  </tbody>
+                  </table>
+                  <br>
+          </div>
+          </div>
+          </div>
+
+          </div>
+          </div>
+          </div>
+        </div>
+        <hr>
+</div>
