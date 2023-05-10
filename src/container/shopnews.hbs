@@ -1,0 +1,28 @@
+<main>
+{{> breadcrumb}}
+{{#with newsData}}
+  <div class="row">
+  <div>
+    <img src="{{photo}}" class="card-img" alt="Image">
+    <div class="card">
+      {{#with head}}
+      <div class="card-body">
+        <h5 class="card-title">{{heading}} </h5>
+        <p class="card-text">{{description}} </p>
+      </div>
+      {{/with}}
+      {{#each body}}
+      <div class="card-body">
+        <h5 class="card-title">{{title}} </h5>
+        <p class="card-text">{{text}} </p>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+{{/with}}
+<hr class='mt-4' />
+{{#with newsOtherBlock}}
+  <h5 class="text-center">{{title}} </h5>
+  {{> shoppost}}
+{{/with}}
+</main>
