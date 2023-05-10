@@ -1,0 +1,21 @@
+<hr class='mt-4' />
+<div class='row ms-2'>
+  {{#each footer}}
+
+    <div class='list-group col-2'>
+      <div class='list-group-item'>
+        <ul class='nav flex-column'>
+          <li>
+            {{#each this}}
+              <a
+                class='nav-item nav-link'
+                aria-current='page'
+                href='{{link}}'
+              >{{text}} </a>
+            {{/each}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  {{/each}}
+</div>

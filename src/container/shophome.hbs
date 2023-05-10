@@ -1,26 +1,4 @@
 <main>
-  {{#with navigation}}
-  <nav class="navbar navbar-expand-sm bg-body-tertiary m-0">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav ms-2">
-        {{#each links}}
-          <a
-            class='btn btn-link'
-            href='{{href}}'
-            role='button'
-          >{{text}} </a>
-        {{/each}}
-          <a class="nav-link disabled">Disabled</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</nav>
-  {{/with}}
 {{#with newsBlock}}
   <h1 class="text-center mt-5">{{title}} </h1>
   <div class="row g-0">
@@ -50,21 +28,7 @@
   {{/each}}
   </ul>
 
-<div class="row g-2">
-{{#each cards}}
-  <div class="card col-4 px-1">
-    <img src="{{image}}" class="card-img-top" alt="image">
-    <div class="card-body">
-      <h5 class="card-title">
-        {{title}}
-        {{#if isHot}}<span class="badge text-bg-danger text-capitalize">Hot!</span>{{/if}}
-        {{#if isNew}}<span class="badge text-bg-success">Нове</span>{{/if}}
-      </h5>
-      <p class="card-text">{{description}} </p>
-    </div>
-  </div>
-{{/each}}
-</div>
+{{>shopcard}}
 {{/with}}
 <hr class="my-5">
 {{#with subscribe}}
@@ -83,37 +47,4 @@
   </div>
 </div>
 {{/with}}
-<hr class="my-5">
-{{#with service}}
-<div class="card bg-success text-light">
-  <div class="card-body text-center">
-    <h2>{{title}} </h2>
-    <p class="m-1">{{description}} </p>
-    {{#each buttons}}
-    <a
-      href='{{link}}'
-      class='btn btn-primary col-2 m-1 p-0'
-    >{{text}} </a>
-    {{/each}}
-  </div>
-</div>
-{{/with}}
-<hr class="mt-5">
-<div class="row">
-  {{#each footer}}
-  
-  <div class="list-group col-2">
-    <div class="list-group-item">
-    <ul class="nav flex-column">
-      <li>
-        {{#each this}}
-        <a class="nav-item nav-link" aria-current="page" href="{{link}}">{{text}} </a>
-        {{/each}}
-      </li>
-    </ul>
-    </div>
-  </div>
-  
-  {{/each}}
-</div>
 </main>
