@@ -1,0 +1,27 @@
+<div class='row g-2'>
+  {{#each cards}}
+    <div class='card col-4 px-1'>
+      <img
+        src='{{image}}'
+        class='card-img-top'
+        alt='image'
+      />
+      <div class='card-body'>
+        <h5 class='card-title'>
+          {{title}}
+          {{#if price}}<h3>{{price}} </h3>{{/if}}
+          {{#if isHot}}<span
+              class='badge text-bg-warning text-capitalize'
+            >Hot!</span>{{/if}}
+          {{#if isNew}}<span
+              class='badge text-bg-primary'
+            >Нове</span>{{/if}}
+          {{#if isBonus}}<span
+              class='badge text-bg-info'
+            >Bonus</span>{{/if}}
+        </h5>
+        <p class='card-text'>{{description}} </p>
+      </div>
+    </div>
+  {{/each}}
+</div>
