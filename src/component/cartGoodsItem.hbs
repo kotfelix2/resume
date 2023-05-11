@@ -1,0 +1,48 @@
+{{#each this}}
+  <div class='card col-12 mb-3'>
+    <div class='row g-0'>
+      <div class='col-md-2 ps-1'>
+        <img
+          src='{{image}}'
+          class='img-fluid rounded-start'
+          alt='Image'
+        />
+      </div>
+      <div class='col-md-4'>
+        <div class='card-body'>
+          <h5 class='card-title'>{{name}} </h5>
+          <p class='card-text'>{{description}} </p>
+        </div>
+      </div>
+      <div class='col-md-2'>
+        <div class='card-body'>
+          <p class='card-text'>{{price.title}} </p>
+          <h5 class='card-title'>{{price.value}} </h5>
+        </div>
+      </div>
+      <div class='col-md-2'>
+        <div class='card-body'>
+          <p class='card-text'>{{amount}} </p>
+        </div>
+      </div>
+      <div class='col-md-2'>
+        <div class='card-body'>
+          {{#each buttons}}
+            {{#if isPrimary}}
+              <button
+                type='button'
+                class='btn btn-sm btn-primary m-2'
+              >{{text}} </button>
+            {{/if}}
+            {{#if isDanger}}
+              <button
+                type='button'
+                class='btn btn-sm btn-outline-danger m-2'
+              >{{text}} </button>
+            {{/if}}
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+{{/each}}
