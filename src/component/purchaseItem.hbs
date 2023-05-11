@@ -1,0 +1,35 @@
+<div class='card col-12 mb-3'>
+  <div class='row g-0'>
+    <div class='col-md-3'>
+      <div class='card-body'>
+        <p>{{number}} </p>
+        <p><b>{{status}} </b></p>
+      </div>
+    </div>
+    <div class='col-md-2'>
+      <div class='card-body'>
+        <p>{{amount.title}} </p>
+        <p><b>{{amount.value}} </b></p>
+      </div>
+    </div>
+    <div class='col-md-5'>
+      {{#each images}}
+        <img
+          src='{{this}}'
+          class='img-fluid rounded-start'
+          alt='Image'
+        />
+      {{/each}}
+    </div>
+    <div class='col-md-2'>
+      <div class='card-body'>
+        {{#with button}}
+          <a
+            href='{{link}}'
+            class='btn btn-sm btn-primary'
+          >{{text}} </a>
+        {{/with}}
+      </div>
+    </div>
+  </div>
+</div>
