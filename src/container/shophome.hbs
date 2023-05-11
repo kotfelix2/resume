@@ -15,21 +15,6 @@
 
 {{>shopcard}}
 {{/with}}
-<hr class="my-5">
-{{#with subscribe}}
-<div class="card">
-  <div class="card-body bg-dark text-light">
-    <h2>{{header}} </h2>
-    <p class="m-1">{{description}} </p>
-    {{#each buttons}}
-    <div class="row">
-    <a
-      href='{{link}}'
-      class='btn btn-primary col-3 m-1'
-    >{{text}} </a>
-    </div>
-    {{/each}}
-  </div>
-</div>
-{{/with}}
+<hr class='my-5' />
+{{> subscribe}}
 </main>
