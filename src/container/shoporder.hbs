@@ -109,7 +109,7 @@
                   <div class="card">
                     <div class="mb-3">
                       <div class="row">
-                        {{#each this}}
+                        {{#with surname}}
                         <div class="col-6">
                           <label class="form-label mt-1">{{label}} </label>
                           <div class="input-group">
@@ -117,7 +117,37 @@
                           </div>
                           <div class="form-text">{{caption}} </div>
                         </div>
-                        {{/each}}
+                        {{/with}}
+
+                        {{#with name}}
+                        <div class="col-6">
+                          <label class="form-label mt-1">{{label}} </label>
+                          <div class="input-group">
+                            <input type="text" class="form-control" placeholder="{{placeholder}}">
+                          </div>
+                          <div class="form-text">{{caption}} </div>
+                        </div>
+                        {{/with}}
+
+                        {{#with phone}}
+                        <div class="col-6">
+                          <label class="form-label mt-1">{{label}} </label>
+                          <div class="input-group">
+                            <input type="text" class="form-control" placeholder="{{placeholder}}">
+                          </div>
+                          <div class="form-text">{{caption}} </div>
+                        </div>
+                        {{/with}}
+
+                        {{#with email}}
+                        <div class="col-6">
+                          <label class="form-label mt-1">{{label}} </label>
+                          <div class="input-group">
+                            <input type="text" class="form-control" placeholder="{{placeholder}}">
+                          </div>
+                          <div class="form-text">{{caption}} </div>
+                        </div>
+                        {{/with}}
                       </div>
                     </div>
                   </div>
@@ -181,7 +211,6 @@
     </div>
     <hr class="my-3">
 
-Qu
     <div class="row">
       <div class="col-12">
       {{#with quiz}}
