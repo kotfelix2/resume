@@ -1,0 +1,104 @@
+<main>
+<div class="row mb-0">
+  <div class="col-8">
+    {{#with formBlock}}
+    {{> title data=header big=true }}
+      {{#with rating}}
+      <p>{{title}}: {{value}} </p>
+      {{/with}}
+
+      {{#with actionBlock}}
+      <ul class="nav nav-tabs">
+        {{#each tabs}}
+        <li class="nav-item">
+          <a class="nav-link {{#if isActive}}active{{/if}}" aria-current="page" href="#">{{text}} </a>
+        </li>
+        {{/each}}
+      </ul>
+      <hr class="my-4">
+
+        {{#with report}}
+          <div class="card col-12 p-2">
+            <p>{{title}} </p>
+            <a
+            href='{{button.link}}'
+            class='btn col-4 btn-sm btn-secondary m-1 p-0 py-1'
+          >{{button.text}} </a>
+          </div>
+        {{/with}}
+      {{/with}}
+      <hr class="my-4">
+      
+      {{#with feedbackBlock}}
+      {{> title data=title big=false }}
+      {{#with buttons}}
+        <div class="row col-12">
+        {{#each this}}
+          <div class="btn-group col-4 p-2" role="group">
+            {{#if isWarning}}
+            <a
+            href='{{link}}'
+            class='btn btn-warning m-1 p-0 py-1'
+          >{{text}} </a>
+            {{/if}}
+
+            {{#if isSuccess}}
+            <a
+            href='{{link}}'
+            class='btn btn-success m-1 p-0 py-1'
+          >{{text}} </a>
+            {{/if}}
+
+            {{#if isDanger}} 
+            <a
+            href='{{link}}'
+            class='btn btn-danger m-1 p-0 py-1'
+          >{{text}} </a>
+            {{/if}}
+          </div>
+        {{/each}}
+        </div>
+      {{/with}}
+      {{/with}}
+  </div>
+
+    <div class="col-4">
+      {{#with goodsInfo}}
+      <div class="card mb-2 p-1">
+        <img class="col-4 m-1" src="{{photo}}">
+        <p><b>{{name}} </b></p>
+      </div>
+
+      <div class="card mb-2 p-1">
+        <p><b>{{price}} </b></p>
+        <p>{{#if inMarket}}Є в наявності{{/if}} </p>
+        {{#each buttons}}
+        {{#if isPrimary}} 
+          <a
+          href='{{link}}'
+          class='btn btn-sm btn-primary col-6 m-1 p-0 py-1'
+          >{{text}} </a>
+        {{/if}}
+        {{#if isSecondary}} 
+          <a
+          href='{{link}}'
+          class='btn btn-sm btn-secondary col-8 m-1 p-0 py-1'
+          >{{text}} </a>
+        {{/if}}
+        {{/each}}
+      </div>
+
+      <div class="card mb-2 p-1">
+        <p>{{seller.title}} <b>{{seller.value}} </b></p>
+      </div>
+      {{/with}}
+    </div>
+
+  {{/with}}
+  </div>
+</div>
+
+  {{#each reviewList}}
+  {{> reviewItem}}
+  {{/each}}
+</main>
