@@ -1,0 +1,87 @@
+<main>
+{{> breadcrumb}}
+{{> title data=header big=true }}
+
+  {{#with sortBlock}}
+    <div class="row col-12 mb-4">
+    {{#each this}}
+      <div class="btn-group col-4 p-2" role="group">
+        <select class="form-select" aria-label="Default select example">
+          <option class="dropdown-header">{{placeholder}} </option>
+          {{#each options}}
+          <option value={{value}}>{{text}} </option>
+          {{/each}}
+        </select>
+      </div>
+    {{/each}}
+    </div>
+  {{/with}}
+
+<div class="row col-12">
+  <section class="card col-4 p-1 pb-0">
+    {{#with filterBlock}}
+      {{#with sellers}}
+        <p>{{title}} </p>
+          {{#each list}}
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              {{value}}
+            </label>
+          </div>
+        {{/each}}
+      {{/with}}
+      <hr>
+
+      {{#with brands}}
+        <p>{{title}} </p>
+        <input type="text" class="form-control mb-2" placeholder="{{input.placeholder}}">
+        {{#each options}}
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            {{value}}
+          </label>
+        </div>
+        {{/each}}
+      {{/with}}
+      <hr>
+
+      {{#with price}}
+        <p>{{title}} </p>
+        <input class="text-input m-1" placeholder="{{range.from}}">
+        <input class="text-input m-1" placeholder="{{range.to}}">
+        <a
+            href='{{button.link}}'
+            class='btn btn-outline-secondary m-1 p-0 py-1'
+          >{{button.text}} </a>
+      {{/with}}
+      <hr>
+
+      {{#with filterList}}
+      {{#each this}}
+        <p>{{title}} </p>
+          {{#each options}}
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              {{value}}
+            </label>
+          </div>
+        {{/each}}
+        <hr>
+      {{/each}}
+      {{/with}}
+
+    {{/with}}
+  </section>
+
+  <section class="col-8 p-1">
+    <div class="row g-1">
+    {{#each goodsList}}
+      {{> catalogItem}}
+    {{/each}}
+    </div>
+  </section>
+</div>
+</main>
