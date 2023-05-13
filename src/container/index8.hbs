@@ -1,0 +1,12 @@
+<main>
+{{> title data="Список сторінок" big=true }}
+<p>Усі сторінки були зверстані особисто. Натискай і дивись!</p>
+
+  {{#each buttons}}
+    <a
+        href='{{link}}'
+        class='btn btn-primary m-1'
+      >{{text}} </a>
+  {{/each}}
+
+</main>
