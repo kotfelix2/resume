@@ -3785,6 +3785,122 @@ router.get('/shopcatalog', function (req, res) {
 
 // ================================================================
 
+  //            ↙ cюди вводимо назву файлу з сontainer
+
+  //                  ↑↑ сюди вводимо JSON дані
+
+// ================================================================
+
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/index8', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('index8', {
+    layout: 'index',
+    buttons: [
+      {
+        text: 'Bio',
+        link: 'bio',
+      },
+      {
+        text: 'Car',
+        link: 'car',
+      },
+      {
+        text: 'Education',
+        link: 'education',
+      },
+      {
+        text: 'Error',
+        link: 'error',
+      },
+      {
+        text: 'Facebook',
+        link: 'facebook',
+      },
+      {
+        text: 'Js',
+        link: 'js',
+      },
+      {
+        text: 'Mac',
+        link: 'mac',
+      },
+      {
+        text: 'Person',
+        link: 'person',
+      },
+      {
+        text: 'Program',
+        link: 'program',
+      },
+      {
+        text: 'Shopcart',
+        link: 'shopcart',
+      },
+      {
+        text: 'Shopcatalog',
+        link: 'shopcatalog',
+      },
+      {
+        text: 'Shophome',
+        link: 'shophome',
+      },
+      {
+        text: 'Shopnews',
+        link: 'shopnews',
+      },
+      {
+        text: 'Shoporder',
+        link: 'shoporder',
+      },
+      {
+        text: 'Shopproduct',
+        link: 'shopproduct',
+      },
+      {
+        text: 'Shopprofile',
+        link: 'shopprofile',
+      },
+      {
+        text: 'Shopreview',
+        link: 'shopreview',
+      },
+      {
+        text: 'Skills',
+        link: 'skills',
+      },
+      {
+        text: 'Summary',
+        link: 'summary',
+      },
+      {
+        text: 'Task21',
+        link: 'task21',
+      },
+      {
+        text: 'Task22',
+        link: 'task22',
+      },
+      {
+        text: 'Task31',
+        link: 'task31',
+      },
+      {
+        text: 'Web',
+        link: 'web',
+      },
+      {
+        text: 'Work',
+        link: 'work',
+      },
+    ],
+
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
 // ================================================================
 
 // Підключаємо роутер до бек-енду
